@@ -6,22 +6,22 @@ body {
 
 @font-face {
   font-family: ReloadAlt-Medium;
-  src: url(Reload Alt Medium.woff);
+  src: url(ReloadAltMedium.otf);
 }
 
 @font-face {
   font-family: ReloadAlt-Light;
-  src: url(Reload Alt Light.woff);
+  src: url(ReloadAltLight.otf);
 }
 
 @font-face {
   font-family: ReloadAlt-Regular;
-  src: url(Reload Alt Regular.woff);
+  src: url(ReloadAltRegular.otf);
 }
 
 @font-face {
-  font-family: ReloadAlt-Regular;
-  src: url(Reload Alt Bold.woff);
+  font-family: ReloadAlt-Bold;
+  src: url(ReloadAltBold.otf);
 }
 
 @media screen and (max-width:1200px) {
