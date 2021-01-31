@@ -5,23 +5,23 @@ body {
 }
 
 @font-face {
-  font-family: ReloadAlt-Medium;
-  src: url(ReloadAltMedium.otf);
+  font-family: 'ReloadAlt-Medium';
+  src: url('ReloadAltMedium.otf');
 }
 
 @font-face {
-  font-family: ReloadAlt-Light;
-  src: url(ReloadAltLight.otf);
+  font-family: 'ReloadAlt-Light';
+  src: url('ReloadAltLight.otf');
 }
 
 @font-face {
-  font-family: ReloadAlt-Regular;
-  src: url(ReloadAltRegular.otf);
+  font-family: 'ReloadAlt-Regular';
+  src: url('ReloadAltRegular.otf');
 }
 
 @font-face {
-  font-family: ReloadAlt-Bold;
-  src: url(ReloadAltBold.otf);
+  font-family: 'ReloadAlt-Bold';
+  src: url('ReloadAltBold.otf');
 }
 
 @media screen and (max-width:1200px) {
