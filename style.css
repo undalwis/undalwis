@@ -4,6 +4,26 @@ body {
     overflow-x: hidden;
 }
 
+@font-face {
+  font-family: ReloadAlt-Medium;
+  src: url(Reload Alt Medium.woff);
+}
+
+@font-face {
+  font-family: ReloadAlt-Light;
+  src: url(Reload Alt Light.woff);
+}
+
+@font-face {
+  font-family: ReloadAlt-Regular;
+  src: url(Reload Alt Regular.woff);
+}
+
+@font-face {
+  font-family: ReloadAlt-Regular;
+  src: url(Reload Alt Bold.woff);
+}
+
 @media screen and (max-width:1200px) {
     body {
         position: relative;
@@ -301,7 +321,6 @@ video {
     color: white;
     font-size: 1em;
     padding: 30px;
-    font-family: 'Arial';
     text-align: center;
     font-family: 'Open Sans';
 }
