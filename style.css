@@ -1,0 +1,820 @@
+body {
+    background-color: black;
+    height: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:1200px) {
+    body {
+        position: relative;
+ margin: 15px;
+    background-color: black;
+    height: auto;
+    overflow-x: hidden;
+}
+}
+
+.launch {
+    position: absolute;
+    display: flex;
+    top: 25px;
+    left: 75px;
+    width: 250px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #e10a0b;
+    z-index: 100;
+}
+
+.launch p {
+    position: relative;
+    margin: auto;
+    font-family: 'Jura';
+    color: #fff;
+    font-weight: 600;
+}
+
+.logo {
+   position: absolute;
+   display: flex;
+   top: 25px;
+   left: 50%;
+   transform:translate(-15%);
+   width: auto;
+   height: 50px;
+   text-align: center;
+    z-index: 100;
+}
+
+#triangle {
+  position: fixed;
+    width: 185px;
+    height: 185px;
+  top: 0px;
+  right: 0px;
+  background-color: clear;
+          border-top: 185px solid black;
+      border-left: 185px solid transparent;
+    z-index: 10000000000020;
+}
+
+#triangle #activator {
+  display: block;
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  top: 25px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#triangle #activator .menu-icon,
+#triangle #activator .menu-icon::before,
+#triangle #activator .menu-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3.4px;
+  background: #fff;
+  border-radius: 1px;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+    z-index: 1000;
+}
+
+#triangle #activator .menu-icon p {
+ position: relative;
+    top: 20px;
+    left: -50%;
+    transform: translate(41%);
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    font-family: "Jura";
+    z-index: 1000;
+}
+
+#activator .menu-icon {
+  top: 8px;
+}
+#activator .menu-icon::before {
+  top: -8px;
+}
+#activator .menu-icon::after {
+  bottom: -8px;
+}
+
+#activator.active .menu-icon {
+  background: none;
+}
+#activator.active .menu-icon::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#activator.active .menu-icon::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#activate-menu {
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -40%;
+  width: 40%;
+  list-style-type: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: #000;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#activate-menu.visible {
+  right: 0;
+}
+
+#fade-bg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/**LANDING CONTAINER**/
+.landingcontainer {
+    position: relative;
+    height: 100vh;
+}
+
+.landingcontainer h1 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 50;
+    font-family: 'ReloadAlt-Medium';
+    font-size: 70px;
+    color: #fff;
+    line-height: 66px;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+/**INTRO CONTAINER**/
+.introcontainer {
+    position: relative;
+    height: 100vh;
+    background-image: url("introbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introtext {
+    position: relative;
+    top: 30%;
+    transform: translate(-30%,-50%);
+    float: right;
+    height: 100px;
+    width: 500px;
+    color: white;
+}
+
+.introtext h2 {
+    position: relative;
+    text-align: right;
+    font-family: 'ReloadAlt-Medium';
+    font-size: 2.1em;
+}
+
+.introtext p {
+    position: relative;
+    text-align: right;
+    font-size: 1em;
+    font-family: 'Open Sans';
+}
+
+/**WHAT I BRING CONTAINER**/
+.whatibringcontainer {
+  position: relative;
+  padding: 200px 0;
+  background: #e10a0b;
+  overflow: visible;
+  z-index: 10;
+  height: auto;
+}
+
+.whatibringcontainer:before, .whatibringcontainer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+
+.whatibringcontainer:after {
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+
+.whatibringcontainer h1{
+  position: relative;
+  text-align: center;
+    justify-content: center;
+  color: white;
+    font-family: 'ReloadAlt-Medium';
+    font-size: 3em;
+}
+
+#flex-container {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.flex-item {
+    width: 800px;
+    height: 350px;
+    border: 1px #e10a0b solid;
+    background: #e10a0b;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.flex-item img {
+   position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: auto;
+    width: 150px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.flex-item h2 {
+    color: white;
+    font-family: 'ReloadAlt-Medium';
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.5em;
+}
+
+
+.flex-item p {
+    color: white;
+    font-size: 1em;
+    padding: 30px;
+    font-family: 'Arial';
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+/**SKILLS CONTAINER**/
+.skillscontainer {
+  position: relative;
+  padding: 200px 0;
+  background: black;
+  overflow: visible;
+  z-index: 5;
+  height: 100vh;
+}
+
+/* where the magic happens */
+.skillscontainer:before, .skillscontainer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: right top;
+  transform: skewY(-3deg);
+}
+
+.skillscontainer:after {
+  bottom: 0;
+  transform-origin: right bottom;
+  transform: skewY(3deg);
+}
+
+@media screen and (max-width: 1200px) {
+  .skillscontainer {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+.pages {
+    position: relative;
+    top: -60%;
+    height: auto;
+    width: 100vw;
+}
+
+.wrapper {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.panel._active {
+  z-index: 10;
+}
+
+.trans-layer, .section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.trans-layer {
+  background: #000;
+  transform: translateY(-100%) skew(0) rotate(0) scale(2);
+  border-radius: 50%;
+  transition: all 500ms ease-in-out;
+  transition-delay: 500ms;
+}
+._active .trans-layer {
+  transform: translateY(0) skew(0) rotate(0) scale(2);
+  transition-delay: 0ms;
+}
+
+.section {
+  transform: translateY(100%);
+  transition: all 500ms ease-in-out;
+  transition-delay: 0ms;
+  background: black;
+}
+._active .section {
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+
+.section-content {
+  position: relative;
+  top: 30%;
+    left: 8%;
+  display: inline-block;
+  max-width: 50%;
+  text-align: left;
+  margin: 15px;
+  vertical-align: top;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Open Sans';
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 500ms ease;
+  transition-delay: 0s;
+}
+
+.section-content h1{
+    padding: 10px 60px;
+    text-align: left;
+    font-family: 'ReloadAlt-Medium';
+    text-transform: uppercase;
+}
+
+.section-content h2{
+    text-align: left;
+    font-size:1.6em;
+    font-family: 'ReloadAlt-Medium';
+    text-transform: uppercase;
+}
+
+.section-content p{
+    font-size:1.2em;
+    font-family: 'Open Sans';
+    padding: 20px 60px;
+     text-align: justify;
+  text-justify: inter-word;
+}
+
+.image-content {
+     position: relative;
+    top: 15%;
+        left: 8%;
+    display: inline-block;
+  max-width: 40%;
+  text-align: left;
+  padding: 30px;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+.image-content img {
+   width: 400px;
+    height: 400px; 
+}
+
+
+._active .section-content {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 1000ms;
+}
+
+.nav-dots {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 40px;
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: clear;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+    color: white;
+    font-family: 'ReloadAlt-Medium';
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+.nav-dot.active {
+  background: clear;
+  color: red;
+    font-size: 2em;
+    padding-bottom: 30px;
+}
+
+
+/**RESUME CONTAINER**/
+.resumecontainer {
+  position: relative;
+  padding: 200px 0;
+  background: #e10a0b;
+  overflow: visible;
+    z-index: 1000000000;
+  height: auto;
+}
+
+/* where the magic happens */
+.resumecontainer:before, .resumecontainer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+
+.resumecontainer:after {
+  top: 0;
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+
+.resumecontainer h1 {
+    position: relative;
+    left: 50px;
+    font-family: 'ReloadAlt-Medium';
+    font-size: 2.5em;
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .resumecontainer {
+  position: relative;
+  padding: 200px 0;
+  background: black;
+  overflow: visible;
+    z-index: 1000000000;
+  height: auto;
+}
+
+/* where the magic happens */
+.resumecontainer:before, .resumecontainer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+
+.resumecontainer:after {
+  top: 0;
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+
+.resumecontainer h1 {
+    position: relative;
+    left: 50px;
+    font-family: 'ReloadAlt-Medium';
+    font-size: 2.5em;
+    color: white;
+}
+    
+  }
+
+#projectFacts {
+    position: relative;
+    left: 2%;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.projectFactsWrap{
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+
+#projectFacts .fullWidth{
+  padding: 0;
+    overflow-x: hidden;
+}
+
+.projectFactsWrap .item{
+  width: 20%;
+  height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  padding: 50px 0px;
+  text-align: left;
+    overflow-x: hidden;
+}
+
+.projectFactsWrap .item:nth-child(1){
+  background: clear;
+}
+
+.projectFactsWrap .item:nth-child(2){
+  background: clear;
+}
+
+.projectFactsWrap .item:nth-child(3){
+  background: clear;
+}
+
+.projectFactsWrap .item:nth-child(4){
+  background: clear;
+}
+
+.projectFactsWrap .item p.number{
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+    margin-left: 20px;
+    font-size: 3em;
+    overflow-x: hidden;
+}
+
+.projectFactsWrap .item p{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 5px;
+  padding: 10px;
+      font-family: 'ReloadAlt-Medium';
+    font-size: 1.5em;
+}
+
+
+.projectFactsWrap .item i{
+  vertical-align: middle;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.projectFactsWrap .item:hover i, .projectFactsWrap .item:hover p{
+  color: white;
+}
+
+
+@media (max-width: 786px){
+  .projectFactsWrap .item {
+     flex: 0 0 50%;
+  }
+}
+
+
+.viewresume {
+    position: relative;
+    left: 70%;
+    max-width: 300px;
+    height: 35px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    border-bottom: 2px solid black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 1200px){
+.viewresume {
+    position: relative;
+    left: 70%;
+    max-width: 300px;
+    height: 35px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #e10a0b;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+}
+/* unvisited link */
+.viewresume a:link {
+  color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+.viewresume a:visited {
+  color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.viewresume a:hover {
+  color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+.viewresume a:active {
+  color: white;
+    text-decoration: none;
+}
+
+/**DISCLAIMER CONTAINER**/
+.disclaimer {
+  position: relative;
+  padding: 30px 0;
+  background: black;
+  overflow: visible;
+  z-index: 1000000000;
+  height: 20vh;
+ padding: 20px;
+   
+}
+
+.disclaimer h1{
+    text-align: right;
+    color: gray;
+    font-size:1.5em;
+    margin-left: 50px;
+    font-family:'ReloadAlt-Medium';
+}
+
+.disclaimer p{
+    text-align: right;
+    color: gray;
+    margin-left: 50px;
+    font-family: 'Open Sans';
+}
+
+/* where the magic happens */
+.disclaimer:before, .disclaimer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+
+.disclaimer:after {
+  top: 0;
+  transform-origin: left bottom;
+  transform: skewY(0deg);
+}
+
+@media (max-width: 1200px){
+    .disclaimer {
+  position: relative;
+  padding: 30px 0;
+  background: #e10a0b;
+  overflow: visible;
+  z-index: 1000000000;
+  height: 10vh;
+ padding: 20px;
+   
+}
+
+.disclaimer h1{
+    text-align: right;
+    color: white;
+    font-size:1.5em;
+    margin-left: 50px;
+    font-family:'ReloadAlt-Medium';
+}
+
+.disclaimer p{
+    text-align: right;
+    color: white;
+    margin-left: 50px;
+    font-family: 'Open Sans';
+}
+
+/* where the magic happens */
+.disclaimer:before, .disclaimer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+
+.disclaimer:after {
+  top: 0;
+  transform-origin: left bottom;
+  transform: skewY(0deg);
+}
+}
